@@ -18,6 +18,7 @@
       </div>
     </div>
     </div>
+    <div class="mob-links">
   <div class="navbar-link dropdown" (click)="toggleDropdown2($event)" (mouseover)="showDropdown2($event)" (mouseleave)="hideDropdown2($event)">
       {{'OtherProjects' | translate}}
       <div class="dropdown-menu" [class.open]="dropdownOpen2">
@@ -25,10 +26,12 @@
       </div>
     </div>
     </div>
+
   <a href="https://www.linkedin.com/in/žan-ambrožič-942b4923b" class="navbar-link">{{'About' | translate}}</a>
   <div class="lang-switch">
   <button (click)="switchLang('sl')" [class.active]="currentLang === 'sl'">SL</button>
   <span>|</span>
   <button (click)="switchLang('en')" [class.active]="currentLang === 'en'">EN</button>
   </div>
+</div>
 </nav>
