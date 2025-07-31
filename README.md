@@ -1,1 +1,1 @@
-Celotna koda te strani, ki je spisana v Angularju./Complete code of this website, written in Angular.
+Celotna koda te strani, ki je spisana v Angularju. Koda se nahaja v mapi zanamb, ostale datoteke so namenjene poganjanju spletne strani./Complete code of this website, written in Angular. You may find it in the directory zanamb, other files are needed to run the website.
