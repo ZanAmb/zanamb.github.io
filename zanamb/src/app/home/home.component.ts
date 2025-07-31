@@ -27,7 +27,6 @@ rootFiles: FileNode[] = [];
     this.github.getRepos().subscribe(data => {
       this.repos = data;
       this.repos = this.repos.filter(r => r.name != "FMF"); // Exclude unwanted public repos (private would need authorization), in my case the one, shown separately.
-      this.repos = this.repos.filter(r => r.name != "zanamb.github.io"); // This is built verison of the site.
     });
     this.github.getRepoFolders('FMF')
       .subscribe(data => {
