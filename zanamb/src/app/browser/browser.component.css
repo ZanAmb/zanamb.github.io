@@ -1,0 +1,17 @@
+button{
+background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.2em;
+    color: white;
+}
+.markdown-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.markdown-body img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+}

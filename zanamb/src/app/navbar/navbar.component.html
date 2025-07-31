@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+    <img src="assets/graphics/logo.png" alt="Logo" class="logo" (click)="goHome()">
+    <div class="hamburger" (click)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+<div class="navbar-links" [class.open]="menuOpen">
+  <a href="#" class="navbar-link">{{'HOME' | translate}}</a>
+  <div class="mob-links">
+  <div class="navbar-link dropdown" (click)="toggleDropdown($event)" (mouseover)="showDropdown($event)" (mouseleave)="hideDropdown($event)">
+      FMF
+      <div class="dropdown-menu" [class.open]="dropdownOpen">
+        <a *ngFor="let repo of fmf" class="dropdown-item" (click)="openFmf(repo.name)">{{repo.name | translate}}</a>
+      </div>
+    </div>
+    </div>
+  <!--<a href="other" class="navbar-link">{{'OtherProjects' | translate}}</a>-->
+  <a href="https://www.linkedin.com/in/žan-ambrožič-942b4923b" class="navbar-link">{{'About' | translate}}</a>
+  <div class="lang-switch">
+  <button (click)="switchLang('sl')" [class.active]="currentLang === 'sl'">SL</button>
+  <span>|</span>
+  <button (click)="switchLang('en')" [class.active]="currentLang === 'en'">EN</button>
+  </div>
+</div>
+</nav>

@@ -1,0 +1,17 @@
+<h1>~ FMF ~</h1>
+<p style="text-align: center;">{{'FMF_d' | translate}}</p>
+<div class="grid">
+    <div *ngFor="let repo of fmf" class="dir">
+        <h3><p (click)="openFmf(repo.name)" target="_blank">{{ repo.name | translate}}</p></h3>
+        <p>{{ repo.description }}</p>
+    </div>
+</div>
+<div class="spacer"></div>
+<h1>~ {{'OtherProjects' | translate}} ~</h1>
+<p style="text-align: center;">{{'other_d' | translate}}</p>
+<div class="grid">
+    <div *ngFor="let repo of repos" class="dir">
+        <h3><p (click)="openRepo(repo.name)" target="_blank">{{ repo.name | translate}}</p></h3>
+        <p>{{ repo.description }}</p>
+    </div>
+</div>

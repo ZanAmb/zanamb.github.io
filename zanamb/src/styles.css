@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; color: white }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgb(34, 64, 112);}
+h1{
+    font-size: clamp(25px, 1.5vw, 150px);
+        font-weight: bold;
+        margin-top: 0;
+        text-align: center;
+}
+h2{
+    font-size: clamp(16px, 1vw, 100px);
+    font-weight: bold;
+}
+a{
+    color:white
+}
+  .spacer{
+height: 2vw;
+  }
+/* This part is here, because I ran out of budget in navbar.component.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30vw;
+  background: linear-gradient(
+  to bottom,
+  rgb(6, 178, 252) 0%,
+  rgb(0, 121, 173) 75%,
+  rgba(255,255,255,0)100%
+);
+  position: sticky;
+  top:0;
+  z-index: 1000;
+}
+
+.navbar-logo .logo {
+  width: 5vw;
+  cursor: pointer;
+}
+@media (max-width: 768px){
+  .spacer{
+height: 5vh;
+  }
+}

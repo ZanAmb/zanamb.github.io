@@ -1,0 +1,18 @@
+<h2><button (click)="goUpDirectory()" >⬆️</button>📁 {{ username }}/{{ repo }}{{ path ? '/' + path : '' }}</h2>
+<div class="markdown-wrapper"><div *ngIf="readme" class="markdown-body" [innerHTML]="readme"></div></div>
+<ul>
+  <li *ngFor="let item of fFiles">
+    <ng-container [ngSwitch]="item.type">
+      <a *ngSwitchCase="'dir'" 
+         (click)="openDir(repo, item.path)">
+        📁 {{ item.name }}
+      </a>
+
+      <a *ngSwitchCase="'file'" 
+         [href]="'https://github.com/ZanAmb/' + repo + '/blob/main/' + item.path" 
+         target="_blank">
+        📄 {{ item.name }}
+      </a>
+    </ng-container>
+  </li>
+</ul>

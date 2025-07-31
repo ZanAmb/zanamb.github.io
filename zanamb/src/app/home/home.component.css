@@ -1,0 +1,24 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 100px;
+    justify-content: center;
+  }
+.dir {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+p{
+  text-align: center;
+}
+
+@media (max-width: 768px){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 30px;
+    justify-content: center;
+  }
+}

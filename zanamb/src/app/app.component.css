@@ -1,0 +1,13 @@
+.contents{
+    padding-left: 10%;
+    padding-right: 10%;
+    min-height: calc(100% - 7vw - 89px);
+}
+
+@media (max-width: 768px){
+    .contents{
+        padding-left: 3%;
+        padding-right: 3%;
+        min-height: calc(100% - 28.5vw - 174px);
+    }
+}
