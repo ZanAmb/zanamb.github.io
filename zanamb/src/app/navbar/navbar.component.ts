@@ -78,5 +78,8 @@ export class NavbarComponent implements OnInit {
   }
   openFmf(fol: string){
     this.router.navigate(['/repos', 'FMF', fol])
+    setTimeout(() => {
+    window.location.reload();
+  }, 5);
   }
 }

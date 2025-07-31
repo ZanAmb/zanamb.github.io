@@ -28,6 +28,7 @@ export class BrowserComponent implements OnInit {
 
   async ngOnInit() {
       await new Promise(resolve => setTimeout(resolve, 5));
+      this.readme = "";
       const full = this.router.url.replace(/^\/repos\//, '');
       const segments = full.split('/');
       this.repo = segments[0];

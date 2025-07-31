@@ -15,3 +15,6 @@ background: none;
   height: auto;
   display: block;
 }
+a{
+  cursor: pointer;
+}
