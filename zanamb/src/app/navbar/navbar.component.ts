@@ -14,7 +14,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   currentLang: string;
-  fmf: any[] = []
+  fmf: any[] = [];
+  othr: any[] = [];
 
   constructor(public translate: TranslateService, private github: GithubService, private router: Router) {
     this.currentLang = translate.currentLang || translate.getDefaultLang();
@@ -30,6 +31,7 @@ export class NavbarComponent implements OnInit {
 
   menuOpen=false;
   dropdownOpen=false;
+  dropdownOpen2=false;
   isMobile=false;
 
   toggleMenu(){
@@ -47,6 +49,18 @@ export class NavbarComponent implements OnInit {
     if (!this.isMobile){
     this.dropdownOpen = false;}
   }
+  toggleDropdown2(event: Event) {
+    event.stopPropagation();
+    this.dropdownOpen2 = !this.dropdownOpen2;
+  }
+  showDropdown2(event: Event){
+    if (!this.isMobile){
+    this.dropdownOpen2 = true;}
+  }
+  hideDropdown2(event: Event){
+    if (!this.isMobile){
+    this.dropdownOpen2 = false;}
+  }
 
   ngOnInit() {
       this.isMobile = this.checkIfMobileDevice();
@@ -55,6 +69,10 @@ export class NavbarComponent implements OnInit {
       .subscribe(data => {
         this.fmf = data;
       });
+      this.github.getRepos().subscribe(data => {
+      this.othr = data;
+      this.othr = this.othr.filter(r => r.name != "FMF"); // Exclude unwanted public repos (private would need authorization), in my case the one, shown separately.
+    });
   }
 
   ngOnDestroy() {
@@ -78,6 +96,12 @@ export class NavbarComponent implements OnInit {
   }
   openFmf(fol: string){
     this.router.navigate(['/repos', 'FMF', fol])
+    setTimeout(() => {
+    window.location.reload();
+  }, 5);
+  }
+    openRepo(rpn: string){
+    this.router.navigate(['/repos', rpn]);
     setTimeout(() => {
     window.location.reload();
   }, 5);
