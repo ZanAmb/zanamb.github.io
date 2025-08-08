@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; color: white }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgb(34, 64, 112);}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgb(16, 35, 67);}
 h1{
     font-size: clamp(25px, 1.5vw, 150px);
         font-weight: bold;
